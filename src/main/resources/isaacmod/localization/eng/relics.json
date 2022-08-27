@@ -1,0 +1,10 @@
+{
+  "${project.artifactId}:PinkDrink": {
+    "NAME": "Pink Drink",
+    "FLAVOR": "Strawberry Bubblegum flavored!",
+    "DESCRIPTIONS": [
+      "Once Per Combat, when your hp falls below #b30%, this relic becomes [#2aecd7]clickable[]. NL NL When [#2aecd7]clicked[] recover your #gfull #ghp and throw away the #pPink #pDrink.",
+      "[#2aecd7]Right [#2aecd7]click [#2aecd7]to [#2aecd7]drink.[]"
+    ]
+  }
+}

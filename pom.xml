@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <name>Isaac Mod</name>
-    <description>A mod for Isaac</description>
+    <description>A mod for Isaac! Happy Birthday!</description>
     <groupId>com.blanktheevil</groupId>
     <artifactId>isaacmod</artifactId>
     <version>0.0.0</version>
@@ -40,6 +40,13 @@
             <version>${mtsVersion}</version>
             <scope>system</scope>
             <systemPath>${modsFolder}1605060445/ModTheSpire.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>StSLib</artifactId>
+            <version>v2.4.1</version>
+            <scope>system</scope>
+            <systemPath>${modsFolder}1609158507/StSLib.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -80,7 +87,7 @@
                 <excludes>
                     <exclude>ModTheSpire.json</exclude>
                     <exclude>META-INF/isaacmod.prop</exclude>
-                    <exclude>com/blanktheevil/isaacmod/localization/**/*</exclude>
+                    <exclude>isaacmod/localization/**/*</exclude>
                 </excludes>
             </resource>
             <resource>
@@ -89,7 +96,7 @@
                 <includes>
                     <include>ModTheSpire.json</include>
                     <include>META-INF/isaacmod.prop</include>
-                    <include>com/blanktheevil/isaacmod/localization/**/*</include>
+                    <include>isaacmod/localization/**/*</include>
                 </includes>
             </resource>
         </resources>

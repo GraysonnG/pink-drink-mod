@@ -1,0 +1,7 @@
+{
+  "${project.artifactId}:PinkDrinkOption": {
+    "TEXT": [
+      "Obtain a #pPink #pDrink."
+    ]
+  }
+}
