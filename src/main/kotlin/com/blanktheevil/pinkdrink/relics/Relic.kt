@@ -1,7 +1,7 @@
-package com.blanktheevil.isaacmod.relics
+package com.blanktheevil.pinkdrink.relics
 
 import basemod.abstracts.CustomRelic
-import com.blanktheevil.isaacmod.utils.TextureLoaderKt
+import com.blanktheevil.pinkdrink.utils.TextureLoaderKt
 import com.megacrit.cardcrawl.helpers.GameDictionary
 import com.megacrit.cardcrawl.helpers.PowerTip
 import com.megacrit.cardcrawl.helpers.TipHelper

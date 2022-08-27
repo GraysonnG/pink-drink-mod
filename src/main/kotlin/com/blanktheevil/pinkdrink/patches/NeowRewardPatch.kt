@@ -1,6 +1,6 @@
-package com.blanktheevil.isaacmod.patches
+package com.blanktheevil.pinkdrink.patches
 
-import com.blanktheevil.isaacmod.relics.PinkDrink
+import com.blanktheevil.pinkdrink.relics.PinkDrink
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn

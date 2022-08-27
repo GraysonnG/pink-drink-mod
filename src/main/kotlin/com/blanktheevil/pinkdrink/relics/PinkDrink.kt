@@ -1,7 +1,7 @@
-package com.blanktheevil.isaacmod.relics
+package com.blanktheevil.pinkdrink.relics
 
-import com.blanktheevil.isaacmod.IsaacMod
-import com.blanktheevil.isaacmod.makeID
+import com.blanktheevil.pinkdrink.PinkDrinkMod
+import com.blanktheevil.pinkdrink.makeID
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic
 import com.megacrit.cardcrawl.actions.common.HealAction
 import com.megacrit.cardcrawl.core.CardCrawlGame
@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip
 class PinkDrink : Relic(ID, IMG, TIER, SOUND), ClickableRelic {
   companion object {
     val ID = "PinkDrink".makeID()
-    val IMG = "isaacmod/images/pinkdrink"
+    val IMG = "${PinkDrinkMod.properties.modid}/images/pinkdrink"
     val TIER = RelicTier.SPECIAL
     val SOUND = LandingSound.MAGICAL
   }
@@ -47,7 +47,7 @@ class PinkDrink : Relic(ID, IMG, TIER, SOUND), ClickableRelic {
 
   override fun onRightClick() {
     if (isReady && counter != -2) {
-      CardCrawlGame.sound.play(IsaacMod.SLURP)
+      CardCrawlGame.sound.play(PinkDrinkMod.SLURP)
       counter = -2
       grayscale = true
       stopPulse()
@@ -57,7 +57,7 @@ class PinkDrink : Relic(ID, IMG, TIER, SOUND), ClickableRelic {
         AbstractDungeon.player.maxHealth)
       )
     } else {
-      CardCrawlGame.sound.play(IsaacMod.SLURP, 0.5f)
+      CardCrawlGame.sound.play(PinkDrinkMod.SLURP, 0.5f)
     }
   }
 

@@ -1,7 +1,7 @@
-package com.blanktheevil.isaacmod.patches
+package com.blanktheevil.pinkdrink.patches
 
 import basemod.ReflectionHacks
-import com.blanktheevil.isaacmod.makeID
+import com.blanktheevil.pinkdrink.makeID
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatches2
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch

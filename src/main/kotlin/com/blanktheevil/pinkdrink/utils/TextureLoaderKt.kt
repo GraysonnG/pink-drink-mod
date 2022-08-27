@@ -1,4 +1,4 @@
-package com.blanktheevil.isaacmod.utils
+package com.blanktheevil.pinkdrink.utils
 
 import com.badlogic.gdx.graphics.Texture
 import org.apache.logging.log4j.LogManager

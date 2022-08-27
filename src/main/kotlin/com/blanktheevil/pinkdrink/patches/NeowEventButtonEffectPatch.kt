@@ -1,4 +1,4 @@
-package com.blanktheevil.isaacmod.patches
+package com.blanktheevil.pinkdrink.patches
 
 import basemod.ReflectionHacks
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2

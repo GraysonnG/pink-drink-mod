@@ -1,4 +1,4 @@
-package com.blanktheevil.isaacmod
+package com.blanktheevil.pinkdrink
 
 import basemod.BaseMod
 import basemod.interfaces.AddAudioSubscriber
@@ -7,8 +7,7 @@ import basemod.interfaces.EditStringsSubscriber
 import basemod.interfaces.PostInitializeSubscriber
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.Texture
-import com.blanktheevil.isaacmod.relics.utils.RelicManager
-import com.blanktheevil.isaacmod.utils.TextureLoaderKt
+import com.blanktheevil.pinkdrink.relics.utils.RelicManager
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
 import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.localization.RelicStrings
@@ -18,7 +17,7 @@ import java.util.*
 
 @Suppress("unused")
 @SpireInitializer
-class IsaacMod : EditRelicsSubscriber, EditStringsSubscriber, AddAudioSubscriber, PostInitializeSubscriber {
+class PinkDrinkMod : EditRelicsSubscriber, EditStringsSubscriber, AddAudioSubscriber, PostInitializeSubscriber {
   companion object {
     lateinit var properties: ModProperties
     const val SLURP = "SLURP"
@@ -27,7 +26,8 @@ class IsaacMod : EditRelicsSubscriber, EditStringsSubscriber, AddAudioSubscriber
     fun initialize() {
       try {
         Properties().also {
-          it.load(IsaacMod::class.java.getResourceAsStream("/META-INF/isaacmod.prop"))
+          println("Loading: /META-INF/pinkdrink.prop")
+          it.load(PinkDrinkMod::class.java.getResourceAsStream("/META-INF/pinkdrink.prop"))
           properties = ModProperties(
             it.getProperty("name"),
             it.getProperty("version"),
@@ -38,10 +38,10 @@ class IsaacMod : EditRelicsSubscriber, EditStringsSubscriber, AddAudioSubscriber
         }
       } catch (e: Exception) {
         e.printStackTrace()
-        throw IllegalStateException("Unable to find properties file!")
+        throw IllegalStateException("Unable to find properties file! /META-INF/${properties.modid}.prop")
       }
 
-      BaseMod.subscribe(IsaacMod())
+      BaseMod.subscribe(PinkDrinkMod())
       Settings.isTestingNeow = true
     }
 
@@ -58,16 +58,16 @@ class IsaacMod : EditRelicsSubscriber, EditStringsSubscriber, AddAudioSubscriber
 
   override fun receiveEditRelics() = RelicManager.addRelics()
   override fun receiveEditStrings() {
-    BaseMod.loadCustomStringsFile(RelicStrings::class.java, "isaacmod/localization/eng/relics.json")
-    BaseMod.loadCustomStringsFile(UIStrings::class.java, "isaacmod/localization/eng/ui.json")
+    BaseMod.loadCustomStringsFile(RelicStrings::class.java, "${properties.modid}/localization/eng/relics.json")
+    BaseMod.loadCustomStringsFile(UIStrings::class.java, "${properties.modid}/localization/eng/ui.json")
   }
   override fun receiveAddAudio() {
-    BaseMod.addAudio(SLURP, "isaacmod/audio/slurp.mp3")
+    BaseMod.addAudio(SLURP, "${properties.modid}/audio/slurp.mp3")
   }
 
   override fun receivePostInitialize() {
     BaseMod.registerModBadge(
-      Texture(Gdx.files.internal("isaacmod/images/badge.png")),
+      Texture(Gdx.files.internal("${properties.modid}/images/badge.png")),
       properties.name,
       properties.author,
       properties.description,

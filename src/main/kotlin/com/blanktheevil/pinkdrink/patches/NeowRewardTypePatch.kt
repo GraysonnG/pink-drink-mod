@@ -1,4 +1,4 @@
-package com.blanktheevil.isaacmod.patches
+package com.blanktheevil.pinkdrink.patches
 
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum
 import com.megacrit.cardcrawl.neow.NeowReward

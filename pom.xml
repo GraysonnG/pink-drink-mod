@@ -3,10 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <name>Isaac Mod</name>
+    <name>Pink Drink</name>
     <description>A mod for Isaac! Happy Birthday!</description>
     <groupId>com.blanktheevil</groupId>
-    <artifactId>isaacmod</artifactId>
+    <artifactId>pinkdrink</artifactId>
     <version>0.0.0</version>
 
     <properties>
@@ -95,8 +95,8 @@
                 <filtering>true</filtering>
                 <includes>
                     <include>ModTheSpire.json</include>
-                    <include>META-INF/isaacmod.prop</include>
-                    <include>isaacmod/localization/**/*</include>
+                    <include>META-INF/pinkdrink.prop</include>
+                    <include>pinkdrink/localization/**/*</include>
                 </includes>
             </resource>
         </resources>
